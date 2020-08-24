@@ -11,12 +11,12 @@ const App = () => {
     M.AutoInit();
   });
   return (
-    <>
+    <Fragment>
       <SearchBar />
       <div className='container'>
         <Logs style={{ padding: '20px' }} />
       </div>
-    </>
+    </Fragment>
   );
 };
 
