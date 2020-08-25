@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import TechItem from './TechItem';
 // import { getTechs } from '../../actions/techActions';
-
+import M from 'materialize-css/dist/js/materialize.min.js';
 const TechListModal = () => {
   const [techs, setTechs] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -21,11 +21,22 @@ const TechListModal = () => {
     setTechs(data);
     setLoading(false);
   };
-
+  const closeModal = () => {
+    document.getElementById('tech-list-modal').style.display = 'none';
+  };
   return (
     <div id='tech-list-modal' className='modal'>
       <div className='modal-content'>
-        <h4>Technician List</h4>
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <h4>Technician List</h4>
+          <a
+            href='#!'
+            onClick={closeModal}
+            className='modal-close waves-effect red waves-light btn'
+          >
+            Close
+          </a>
+        </div>
         <ul className='collection'>
           {!loading &&
             techs !== null &&

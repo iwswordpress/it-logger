@@ -24,7 +24,9 @@ const AddTechModal = ({ addTech }) => {
       setLastName('');
     }
   };
-
+  const onCancel = () => {
+    document.getElementById('add-tech-modal').style.display = 'none';
+  };
   return (
     <div id='add-tech-modal' className='modal'>
       <div className='modal-content'>
@@ -58,6 +60,14 @@ const AddTechModal = ({ addTech }) => {
         </div>
       </div>
       <div className='modal-footer'>
+        <a
+          href='#!'
+          onClick={onCancel}
+          className='modal-close waves-effect red waves-light btn'
+        >
+          Cancel
+        </a>
+        <span>&nbsp;&nbsp;&nbsp;</span>
         <a
           href='#!'
           onClick={onSubmit}
