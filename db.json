@@ -1,39 +1,18 @@
 {
   "logs": [
     {
-      "message": "First one",
-      "attention": true,
-      "tech": "Sam Doe2",
-      "date": "2020-08-30T09:15:30.063Z",
-      "id": 1
-    },
-    {
-      "message": "New card",
-      "attention": true,
-      "tech": "Peter Doe3",
-      "date": "2020-08-30T09:15:47.766Z",
-      "id": 2
-    },
-    {
-      "message": "Rebuild",
-      "attention": false,
-      "tech": "Peter Doe3",
-      "date": "2020-08-30T09:16:00.159Z",
-      "id": 3
-    },
-    {
-      "message": "Second",
-      "attention": true,
-      "tech": "Sam Doe2",
-      "date": "2020-08-30T09:16:21.378Z",
-      "id": 4
-    },
-    {
       "message": "Third",
       "attention": false,
       "tech": "John Doe1",
       "date": "2020-08-30T09:16:30.923Z",
       "id": 5
+    },
+    {
+      "message": "Five",
+      "attention": true,
+      "tech": "Sam Doe2",
+      "date": "2020-08-30T09:24:06.498Z",
+      "id": 6
     }
   ],
   "techs": [

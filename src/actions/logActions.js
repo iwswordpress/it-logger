@@ -77,26 +77,26 @@ export const addLog = (log) => async (dispatch) => {
   }
 };
 
-// // Delete log from server
-// export const deleteLog = (id) => async (dispatch) => {
-//   try {
-//     setLoading();
+// Delete log from server
+export const deleteLog = (id) => async (dispatch) => {
+  try {
+    setLoading();
 
-//     await fetch(`/logs/${id}`, {
-//       method: 'DELETE'
-//     });
+    await fetch(`/logs/${id}`, {
+      method: 'DELETE'
+    });
 
-//     dispatch({
-//       type: DELETE_LOG,
-//       payload: id
-//     });
-//   } catch (err) {
-//     dispatch({
-//       type: LOGS_ERROR,
-//       payload: err.response.statusText
-//     });
-//   }
-// };
+    dispatch({
+      type: DELETE_LOG,
+      payload: id
+    });
+  } catch (err) {
+    dispatch({
+      type: LOGS_ERROR,
+      payload: err.response.statusText
+    });
+  }
+};
 
 // // Update log on server
 // export const updateLog = (log) => async (dispatch) => {
@@ -146,12 +146,12 @@ export const addLog = (log) => async (dispatch) => {
 // };
 
 // // Set current log
-// export const setCurrent = (log) => {
-//   return {
-//     type: SET_CURRENT,
-//     payload: log
-//   };
-// };
+export const setCurrent = (log) => {
+  return {
+    type: SET_CURRENT,
+    payload: log
+  };
+};
 
 // // Clear current log
 // export const clearCurrent = () => {
