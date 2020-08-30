@@ -25,24 +25,13 @@ export default (state = initialState, action) => {
         logs: action.payload,
         loading: false
       };
-    case SET_LOADING:
-      return {
-        ...state,
-        loading: true
-      };
-
-    case LOGS_ERROR:
-      console.error(action.payload);
-      return {
-        ...state,
-        error: action.payload
-      };
     case ADD_LOG:
       return {
         ...state,
         logs: [...state.logs, action.payload],
         loading: false
       };
+
     case DELETE_LOG:
       return {
         ...state,
@@ -71,7 +60,18 @@ export default (state = initialState, action) => {
         ...state,
         current: null
       };
+    case SET_LOADING:
+      return {
+        ...state,
+        loading: true
+      };
 
+    case LOGS_ERROR:
+      console.error(action.payload);
+      return {
+        ...state,
+        error: action.payload
+      };
     default:
       return state;
   }
