@@ -1,80 +1,46 @@
 {
   "logs": [
     {
-      "message": "Third",
+      "id": 1,
+      "message": "TEST1",
+      "attention": true,
+      "tech": "Pat Smith",
+      "date": "2020-09-01T08:39:50.508Z"
+    },
+    {
+      "id": 2,
+      "message": "BUILD4",
       "attention": false,
-      "tech": "John Doe1",
-      "date": "2020-08-30T09:16:30.923Z",
-      "id": 5
+      "tech": "Craig West ",
+      "date": "2020-09-01T08:39:40.286Z"
     },
     {
-      "id": 6,
-      "message": "Five",
+      "id": 3,
+      "message": "PC1",
       "attention": false,
-      "tech": "John Doe1",
-      "date": "2020-09-01T07:36:05.115Z"
-    },
-    {
-      "id": 7,
-      "message": "Test",
-      "attention": true,
-      "tech": "Peter Doe3",
-      "date": "2020-09-01T07:36:31.474Z"
-    },
-    {
-      "message": "Network card",
-      "attention": true,
-      "date": "2020-09-01T07:37:12.175Z",
-      "id": 8
-    },
-    {
-      "message": "Rebuild",
-      "attention": true,
-      "tech": "John Doe1",
-      "date": "2020-09-01T07:37:23.142Z",
-      "id": 9
-    },
-    {
-      "message": "Remove disk",
-      "attention": true,
-      "tech": "Sam Doe2",
-      "date": "2020-09-01T07:37:36.115Z",
-      "id": 10
-    },
-    {
-      "message": "Fixed hard drive",
-      "attention": false,
-      "tech": "Sam Doe2",
-      "date": "2020-09-01T07:37:47.238Z",
-      "id": 11
-    },
-    {
-      "message": "New PC card",
-      "attention": true,
-      "tech": "Sam Doe2",
-      "date": "2020-09-01T07:37:58.467Z",
-      "id": 12
+      "tech": "Pat Smith",
+      "date": "2020-09-01T08:39:44.941Z"
     }
   ],
   "techs": [
     {
       "id": 1,
-      "firstName": "John C",
-      "lastName": "Doe"
-    },
-    {
-      "id": 2,
-      "firstName": "Sam",
+      "firstName": "Pat",
       "lastName": "Smith"
     },
     {
-      "id": 3,
-      "firstName": "Sara",
-      "lastName": "Wilson"
+      "id": 2,
+      "firstName": "Sammy",
+      "lastName": "Sing"
     },
     {
-      "firstName": "Craig G",
-      "lastName": "West",
+      "id": 3,
+      "firstName": "Sarah",
+      "lastName": "Johnson"
+    },
+    {
+      "firstName": "Craig",
+      "lastName": "West ",
       "id": 4
     }
   ]

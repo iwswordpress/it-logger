@@ -1,42 +1,19 @@
-import React, { useEffect, useState } from 'react';
-// import { connect } from 'react-redux';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import TechItem from './TechItem';
-// import { getTechs } from '../../actions/techActions';
-import M from 'materialize-css/dist/js/materialize.min.js';
-const TechListModal = () => {
-  const [techs, setTechs] = useState([]);
-  const [loading, setLoading] = useState(false);
+import { getTechs } from '../../actions/techActions';
+
+const TechListModal = ({ getTechs, tech: { techs, loading } }) => {
   useEffect(() => {
     getTechs();
     // eslint-disable-next-line
   }, []);
 
-  const getTechs = async () => {
-    setLoading(true);
-    const res = await fetch('/techs');
-    const data = await res.json();
-    console.log(data);
-
-    setTechs(data);
-    setLoading(false);
-  };
-  const closeModal = () => {
-    document.getElementById('tech-list-modal').style.display = 'none';
-  };
   return (
     <div id='tech-list-modal' className='modal'>
       <div className='modal-content'>
-        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <h4>Technician List</h4>
-          <a
-            href='#!'
-            onClick={closeModal}
-            className='modal-close waves-effect red waves-light btn'
-          >
-            Close
-          </a>
-        </div>
+        <h4>Technician List</h4>
         <ul className='collection'>
           {!loading &&
             techs !== null &&
@@ -47,13 +24,13 @@ const TechListModal = () => {
   );
 };
 
-// TechListModal.propTypes = {
-//   tech: PropTypes.object.isRequired,
-//   getTechs: PropTypes.func.isRequired
-// };
+TechListModal.propTypes = {
+  tech: PropTypes.object.isRequired,
+  getTechs: PropTypes.func.isRequired
+};
 
-// const mapStateToProps = (state) => ({
-//   tech: state.tech
-// });
+const mapStateToProps = (state) => ({
+  tech: state.tech
+});
 
-export default TechListModal;
+export default connect(mapStateToProps, { getTechs })(TechListModal);
