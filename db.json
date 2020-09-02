@@ -2,10 +2,10 @@
   "logs": [
     {
       "id": 1,
-      "message": "TEST1",
-      "attention": true,
+      "message": "TEST12",
+      "attention": false,
       "tech": "Pat Smith",
-      "date": "2020-09-01T08:39:50.508Z"
+      "date": "2020-09-02T09:38:06.357Z"
     },
     {
       "id": 2,
@@ -42,11 +42,6 @@
       "firstName": "Craig",
       "lastName": "West ",
       "id": 4
-    },
-    {
-      "firstName": "Jimmy",
-      "lastName": "Roo",
-      "id": 5
     }
   ]
 }
