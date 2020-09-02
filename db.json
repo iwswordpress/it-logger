@@ -42,6 +42,16 @@
       "firstName": "Craig",
       "lastName": "West ",
       "id": 4
+    },
+    {
+      "firstName": "Jimmy",
+      "lastName": "Roo",
+      "id": 5
+    },
+    {
+      "firstName": "Jane",
+      "lastName": "Tamlin",
+      "id": 6
     }
   ]
 }

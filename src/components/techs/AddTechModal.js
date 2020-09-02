@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
 
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addTech } from '../../actions/techActions';
 import M from 'materialize-css/dist/js/materialize.min.js';
@@ -24,9 +25,7 @@ const AddTechModal = ({ addTech }) => {
       setLastName('');
     }
   };
-  const onCancel = () => {
-    document.getElementById('add-tech-modal').style.display = 'none';
-  };
+
   return (
     <div id='add-tech-modal' className='modal'>
       <div className='modal-content'>
@@ -62,14 +61,6 @@ const AddTechModal = ({ addTech }) => {
       <div className='modal-footer'>
         <a
           href='#!'
-          onClick={onCancel}
-          className='modal-close waves-effect red waves-light btn'
-        >
-          Cancel
-        </a>
-        <span>&nbsp;&nbsp;&nbsp;</span>
-        <a
-          href='#!'
           onClick={onSubmit}
           className='modal-close waves-effect blue waves-light btn'
         >
@@ -84,4 +75,4 @@ AddTechModal.propTypes = {
   addTech: PropTypes.func.isRequired
 };
 
-export default AddTechModal;
+export default connect(null, { addTech })(AddTechModal);
